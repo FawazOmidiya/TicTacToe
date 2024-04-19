@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla T3 Walkthrough</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="grid">
+        <!-- Player Turn -->
+        <div class="turn x-color" data-id="turn">
+          <i class="fa-solid fa-x"></i>
+          <p>Player 1, You're up!</p>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="actions" data-id="actions">
+          <button class="actions-btn" data-id="actions-btn">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="items border hidden" data-id="action-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-game-btn">New Game</button>
+          </div>
+        </div>
+
+        <!-- Game Board -->
+        <div id="1" class="square shadow" data-id="squares"></div>
+        <div id="2" class="square shadow" data-id="squares"></div>
+        <div id="3" class="square shadow" data-id="squares"></div>
+        <div id="4" class="square shadow" data-id="squares"></div>
+        <div id="5" class="square shadow" data-id="squares"></div>
+        <div id="6" class="square shadow" data-id="squares"></div>
+        <div id="7" class="square shadow" data-id="squares"></div>
+        <div id="8" class="square shadow" data-id="squares"></div>
+        <div id="9" class="square shadow" data-id="squares"></div>
+
+        <!-- Score Board -->
+        <div class="score shadow" style="background-color: var(--color-3)">
+          <p>Player 1</p>
+          <span data-id="player-1-stats">0 Wins</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--color-5)">
+          <p>Ties</p>
+          <span data-id="ties">0</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--color-4)">
+          <p>Player 2</p>
+          <span data-id="player-2-stats">0 Wins</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Replicated project by some people</p>
+      <p>Refactored by me</p>
+    </footer>
+    <div class="modal hidden" data-id="modal">
+      <div class="modal-content">
+        <p data-id="modal-txt">Player 1 Wins!</p>
+        <button data-id="modal-btn">Play again</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
